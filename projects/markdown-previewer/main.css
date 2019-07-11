@@ -47,3 +47,15 @@ body {
     background-color: #fff;
     overflow-y: scroll;
 }
+
+#caption {
+    font-size: .8rem;
+    color: #fff;
+    margin: 20px auto;
+    text-align: center;
+}
+#caption a {
+    font-style: italic;
+    text-decoration: none;
+    color: #fff;
+}

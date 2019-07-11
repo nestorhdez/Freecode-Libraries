@@ -1,3 +1,9 @@
+const Caption = () => {
+    return(
+      <p id={'caption'}>by <a href={'https://nestorhh.netlify.com'} target={'_blank'}>Néstor Hdez</a> with React <i class="fab fa-react"></i></p>
+    );
+  }
+
 // ALLOWS LINE BREAKS WITH RETURN BUTTON
 marked.setOptions({
     breaks: true,
@@ -49,6 +55,7 @@ class MarkdownApp extends React.Component {
                     <Editor handleChange={this.handleChange} markdown={this.state.markdown}/>
                     <Preview markdownCoverted={this.convertMardown(this.state.markdown)}/>
                 </div>
+                <Caption/>
             </div>
         );
     }
