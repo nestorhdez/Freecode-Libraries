@@ -22,7 +22,8 @@ body {
 
 #preview-container, #editor-container {
     margin-top: 50px;
-    text-align: start;
+    display: flex;
+    flex-direction: column;
 }
 
 #preview-title, #editor-title {
@@ -37,35 +38,12 @@ body {
     height: 325px;
     width: 90%;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px auto 0;
     padding: 10px;
+    text-align: start;
 }
 
 #preview {
     background-color: #fff;
     overflow-y: scroll;
 }
-
-/* @media (min-width: 768px) {
-    body {
-        display: grid;
-        height: 100vh;   
-    }
-    #app {
-        margin: auto;
-    }
-    #components-container {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    #preview-container, #editor-container {
-        width: 45%;
-    }
-}
-
-@media (min-width: 1999px) {
-    #editor, #preview {
-        height: 500px;
-    }
-} */

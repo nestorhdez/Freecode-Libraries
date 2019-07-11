@@ -7,7 +7,7 @@ marked.setOptions({
 const Preview = (props) => {
     return(
         <div id="preview-container">
-            <h2 id="preview-title">Text converted</h2>
+            <h2 id="preview-title">Preview</h2>
             <div id="preview" dangerouslySetInnerHTML={{__html: props.markdownCoverted}}></div>
         </div>
     );
@@ -16,7 +16,7 @@ const Preview = (props) => {
 const Editor = (props) => {
     return(
         <div id="editor-container">
-            <h2 id="editor-title">Markdown text</h2>
+            <h2 id="editor-title">Editor</h2>
             <textarea id="editor" onChange={props.handleChange} value={props.markdown}></textarea>
         </div>
     );
