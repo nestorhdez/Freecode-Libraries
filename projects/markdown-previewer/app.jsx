@@ -28,6 +28,11 @@ class MarkdownApp extends React.Component {
             markdown: placeHolder
         }
         this.handleChange = this.handleChange.bind(this);
+        this.convertMardown = this.convertMardown.bind(this);
+    }
+
+    convertMardown(text) {
+        return DOMPurify.sanitize(marked(text));
     }
 
     handleChange(e) {
@@ -42,7 +47,7 @@ class MarkdownApp extends React.Component {
                 <h1 id="app-title">Markdown converter</h1>
                 <div id="components-container">
                     <Editor handleChange={this.handleChange} markdown={this.state.markdown}/>
-                    <Preview markdownCoverted={marked(this.state.markdown)}/>
+                    <Preview markdownCoverted={this.convertMardown(this.state.markdown)}/>
                 </div>
             </div>
         );
@@ -95,5 +100,6 @@ And here. | Okay. | I think we get it.
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
 `
+
 
 ReactDOM.render(<MarkdownApp/>, document.querySelector('#app'));
