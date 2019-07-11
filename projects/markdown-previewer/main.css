@@ -22,6 +22,7 @@ body {
 
 #preview-container, #editor-container {
     margin-top: 50px;
+    text-align: start;
 }
 
 #preview-title, #editor-title {
@@ -34,17 +35,18 @@ body {
 
 #editor, #preview {
     height: 325px;
-    width: 100%;
+    width: 90%;
     border-radius: 5px;
     margin-top: 10px;
+    padding: 10px;
 }
 
 #preview {
-    display: flex;
     background-color: #fff;
+    overflow-y: scroll;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     body {
         display: grid;
         height: 100vh;   
@@ -66,4 +68,4 @@ body {
     #editor, #preview {
         height: 500px;
     }
-}
+} */
