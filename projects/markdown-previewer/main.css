@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -39,13 +40,17 @@ body {
     width: 90%;
     border-radius: 5px;
     margin: 10px auto 0;
-    padding: 10px;
+    padding: 10px 20px;
     text-align: start;
 }
 
 #preview {
     background-color: #fff;
     overflow-y: scroll;
+}
+
+ul, ol {
+    list-style-position: inside;
 }
 
 #caption {
